@@ -1,0 +1,20 @@
+using System;
+
+class ContadorPalabras
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una cadena: ");
+        string cadena = Console.ReadLine();
+
+        // Separa la cadena en palabras usando espacios en blanco como delimitadores
+        string[] palabras = cadena.Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+
+        // Cuenta el número de palabras
+        int cantidadPalabras = palabras.Length;
+
+        Console.WriteLine("La cadena tiene {0} palabras.", cantidadPalabras);
+
+        Console.ReadKey();
+    }
+}
