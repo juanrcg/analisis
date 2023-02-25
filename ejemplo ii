@@ -1,0 +1,35 @@
+using System;
+
+class ConversorMayusculasMinusculas
+{
+    static void Main()
+    {
+        Console.Write("Ingrese una cadena: ");
+        string cadena = Console.ReadLine();
+
+        Console.WriteLine("1. Convertir a mayúsculas.");
+        Console.WriteLine("2. Convertir a minúsculas.");
+        Console.Write("Seleccione una opción: ");
+        int opcion = int.Parse(Console.ReadLine());
+
+        string resultado;
+
+        if (opcion == 1)
+        {
+            resultado = cadena.ToUpper();
+        }
+        else if (opcion == 2)
+        {
+            resultado = cadena.ToLower();
+        }
+        else
+        {
+            Console.WriteLine("Opción inválida.");
+            return;
+        }
+
+        Console.WriteLine("Resultado: {0}", resultado);
+
+        Console.ReadKey();
+    }
+}
